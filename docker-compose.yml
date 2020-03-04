@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+
+  docker-squash:
+    build: .
+    image: flaviostutz/docker-squash
+    environment:
+      - SOURCE_IMAGE_ID=flaviostutz/opencv-golang:1.1.0
+      - TARGET_IMAGE_ID=flaviostutz/opencv-golang:squashed
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
