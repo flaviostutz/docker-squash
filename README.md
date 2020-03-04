@@ -1,6 +1,6 @@
 # docker-squash
 
-Docker container for optimizing existing Docker images by squashing all layers into a single one, reducing considerably image size.
+Docker container for reducing existing Docker images by squashing all layers into a single one.
 
 If you have the control over image build, this utility is not needed, as you can achieve the same result by using multi stage builds, doing something like:
 
@@ -37,4 +37,5 @@ services:
 
 * Run ```docker-compose up```
 
-* Verify image size by ```docker images | grep whoami```
+* Verify newly created image and compares sizes by ```docker images | grep whoami```
+
